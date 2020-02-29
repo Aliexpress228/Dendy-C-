@@ -33,7 +33,7 @@ Bullet::Bullet()
     k = 50;
     x = -1;
     y = -1;
-    wh = 9;
+    wh = 27;
 }
 Bullet::~Bullet()
 {
@@ -64,7 +64,8 @@ void Bullet::shotin(int a)
     }
 int Bullet::draw()
     {
-        Win32::TransparentBlt (txDC(), x * k, y * k, k, k, text, 41, 11, wh, wh, TX_BLACK);
+        Win32::TransparentBlt (txDC(), x * k, y * k, k,
+         k, text, 123, 33, wh, wh, TX_BLACK);
         return now;
 
     }

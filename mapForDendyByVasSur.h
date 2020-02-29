@@ -26,7 +26,7 @@ class Map
 Map::Map()
 {
     k = 50;
-    whSrc = 9;
+    whSrc = 27;
     int a[18][18]{
     {3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
     {3, 2, 1, 1, 2, 1, 5, 2, 5, 1, 2, 1, 1, 2, 1, 1, 2, 3},
@@ -75,27 +75,33 @@ void Map::draw()
                     {
                         if (block[i][j] == 3)
                             {
-                                Win32::TransparentBlt (txDC(), i * k, j * k, k, k, text, 51, 1, whSrc, whSrc, TX_BLACK);
+                                Win32::TransparentBlt (txDC(), i * k
+                                , j * k, k, k, text, 153, 3, whSrc, whSrc, TX_BLACK);
                             }
                         else if (block[i][j] == 2)
                             {
-                                Win32::TransparentBlt (txDC(), i * k, j * k, k, k, text, 41, 1, whSrc, whSrc, TX_BLACK);
+                                Win32::TransparentBlt (txDC(), i * k
+                                , j * k, k, k, text, 123, 3, whSrc, whSrc, TX_BLACK);
                             }
                         else if (block[i][j] == 4)
                             {
-                                Win32::TransparentBlt (txDC(), i * k, j * k, k, k, text, 71, 1, whSrc, whSrc, TX_BLACK);
+                                Win32::TransparentBlt (txDC(), i * k
+                                , j * k, k, k, text, 213, 3, whSrc, whSrc, TX_BLACK);
                             }
                         else if (block[i][j] == 5)
                             {
-                                Win32::TransparentBlt (txDC(), i * k, j * k, k, k, text, 51, 11, whSrc, whSrc, TX_BLACK);
+                                Win32::TransparentBlt (txDC(), i * k
+                                , j * k, k, k, text, 153, 33, whSrc, whSrc, TX_BLACK);
                             }
                         else if (block[i][j] == 6)
                             {
-                                Win32::TransparentBlt (txDC(), i * k, j * k, k, k, text, 61, 11, whSrc, whSrc, TX_BLACK);
+                                Win32::TransparentBlt (txDC(), i * k
+                                , j * k, k, k, text, 183, 33, whSrc, whSrc, TX_BLACK);
                             }
                         else
                             {
-                                Win32::TransparentBlt (txDC(), i * k, j * k, k, k, text, 61, 1, whSrc, whSrc, TX_BLACK);
+                                Win32::TransparentBlt (txDC(), i * k
+                                , j * k, k, k, text, 183, 3, whSrc, whSrc, TX_BLACK);
                             }
                     }
             }

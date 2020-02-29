@@ -1,27 +1,34 @@
+
 #include <TXlib.h>
 #include "tankForDendyByVasSur.h"
 #include "mapForDendyByVasSur.h"
 #include "shotForDendyByVasSur.h"
 #include "botForDendyByVasSur.h"
+#include "menuForDendyByVasSur.h"
 
 int main()
 {
     txTextCursor(0);
     txCreateWindow(900, 900);
-
+    txPlaySound ("sound.wav");
     Tank tank;
     Bot bot;
     Map card;
     Bullet gold;
     Bullet silver;
+    Menu menu;
     int i, z = 0, s, g, v = 0, f = 0, c, cv = 0;
     HDC a = txLoadImage("dendyForDendyByVasSur.bmp");
-
+    menu.sprite(a);
     tank.sprite(a);
     bot.sprite(a);
     card.sprite(a);
     silver.sprite(a);
     gold.sprite(a);
+
+
+    menu.startscreen();
+
 
 
     while (GetAsyncKeyState(VK_ESCAPE) == 0)
