@@ -45,7 +45,7 @@ Bot::Bot()
         x = 8;
         y = 16;
         wh = 50;
-        whSrc = 9;
+        whSrc = 27;
         V = 1;
         xSrc = 1;
         ySrc = 1;
@@ -215,7 +215,7 @@ void Bot::draw()
     {
         if (stoy == 0)
         {
-            Win32::TransparentBlt (txDC(), x * wh, y * wh, wh, wh, text, xSrc, ySrc, whSrc, whSrc, TX_BLACK);
+            Win32::TransparentBlt (txDC(), x * wh, y * wh, wh, wh, text, xSrc*3, ySrc*3, whSrc, whSrc, TX_BLACK);
         }
     }
 

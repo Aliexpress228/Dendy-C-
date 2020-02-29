@@ -40,7 +40,7 @@ Tank::Tank()
         x = 2;
         y = 10;
         wh = 50;
-        whSrc = 9;
+        whSrc = 27;
         V = 1;
         xSrc = 1;
         ySrc = 1;
@@ -82,7 +82,7 @@ void Tank::draw()
     {
         if (stoy == 0)
         {
-            Win32::TransparentBlt (txDC(), x * wh, y * wh, wh, wh, text, xSrc, ySrc, whSrc, whSrc, TX_BLACK);
+            Win32::TransparentBlt (txDC(), x * wh, y * wh, wh, wh, text, xSrc*3, ySrc*3, whSrc, whSrc, TX_BLACK);
         }
     }
 void Tank::sprite(HDC a)
